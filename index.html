@@ -67,7 +67,14 @@
         <!-- Step 5: Add AR models under the webar-stage node -->
           <!-- Add webar-loadmonitor attribute to the entities to display loading progress screen before starting the surface tracking -->
           <!-- Refer API Reference documentation for more details -->
-          <a-entity gltf-model="#testmodel" id="testmodel_1" rotation="0 0 0" position="0 0 0" scale="0.25 0.25 0.25" webar-loadmonitor="elType: glb"></a-entity>
+          <a-entity gltf-model="#testmodel" id="testmodel_1" rotation="0 0 0" position="0 0 0" scale="0.25 0.25 0.25" webar-loadmonitor="elType: glb">
+                <a-animation attribute="material.color" to="yellow" duration="1000"></a-animation>
+                <a-animation attribute="rotation"
+                dur="3000"
+                to="0 360 0"
+                repeat="indefinite">
+                </a-animation>
+          </a-entity>
       </a-entity>
 
       <a-light type="spot" color="#FF000" position="-10,0,0" look-at="a-entity"></a-light>
