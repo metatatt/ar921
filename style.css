@@ -4,48 +4,55 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: sans-serif;
+
+    text-rendering: optimizelegibility;
+    font-family: "Lato",sans-serif;
     text-align: center;
+    font-weight: 400;
+
+    background: #f3f8fd;
+    background: -moz-linear-gradient(top, #f3f8fd 0%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #f3f8fd 0%, #ffffff 100%);
+    background: linear-gradient(to bottom, #f3f8fd 0%, #ffffff 100%);
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    cursor: default;
+
     overflow: hidden;
 }
-img {
-    width: 100%;
-    height: 100%;
-}
-.ui-element {
+.btn, .btn:visited {
     position: absolute;
+
+    width: 200px;
+
+    padding: 10px;
+
+    color: #fff;
+
+    border: solid 1px #CE3923;
+    background-color: #CE3923;
+
+    border-radius: 10px;
 }
-#zappar-placement-ui, #zappar-replacement-ui, #cancelUi {
-    background: rgba(52,36,75, 0.8);
-    background: linear-gradient(90deg, rgba(52,36,75,1) 0%, rgba(57,67,108,1) 100%);
-    border-radius: 5px;
-    border: 2px solid #a6d5db;
-    color: white;
-}
-#zappar-replacement-ui, #cancelUi {
-    padding: 0.8em 1.2em 0.7em;
-    top: 0;
+.btn:hover {
+    border: solid 1px #EC472F;
+    background-color: #EC472F;
 }
 #zappar-placement-ui {
-    bottom: 30px;
-    width: 200px;
     left: calc(50% - 100px);
-    padding: 10px;
+    bottom: 30px;
 }
 #zappar-replacement-ui {
-    left: 0;
+    width: 50px;
+    right: 10px;
+    bottom: 10px;
 }
-#facts {
-    bottom: 30vh;
-}
-#sunInfo, #earthInfo {
-    width: 100vw;
-}
-#earthInfo {
-    top: 2.5vh;
-}
-#cancelUi {
-    right: 0;
+#zappar-replacement-ui svg {
+    margin-top: 3px;
 }
 .visible {
     visibility: visible;
