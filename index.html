@@ -41,6 +41,8 @@
       issue-img-height="116px"
       show-guide-view="true"></script>
 
+      <script src="https://rawgit.com/mayognaise/aframe-video-shader/master/dist/aframe-vid-shader.min.js"></script>
+
   </head>
 
   <body>
@@ -68,6 +70,8 @@
           <!-- Add webar-loadmonitor attribute to the entities to display loading progress screen before starting the surface tracking -->
           <!-- Refer API Reference documentation for more details -->
           <a-entity gltf-model="#testmodel" id="testmodel_1" rotation="0 0 0" position="0 0 0" scale="0.25 0.25 0.25" webar-loadmonitor="elType: glb"></a-entity>
+          <a-entity geometry="primitive:box;" material="shader:video;src:url(sample_video.mp4);"></a-entity>
+
       </a-entity>
 
     </a-scene>
