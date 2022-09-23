@@ -59,7 +59,10 @@
 
       <a-assets timeout="60000">
         <a-asset-item id="testmodel" src="./models/syringe.glb"></a-asset-item>
+        <video id="sample-video" autoplay loop="true" src="./models/sample_video.mp4"></video>
       </a-assets>
+    
+      
 
       <!-- Step 4: Add webar-stage attribute to an AFrame's parent <a-entity> tag -->
       <a-entity webar-stage>
@@ -67,9 +70,13 @@
         <!-- Step 5: Add AR models under the webar-stage node -->
           <!-- Add webar-loadmonitor attribute to the entities to display loading progress screen before starting the surface tracking -->
           <!-- Refer API Reference documentation for more details -->
-          <a-entity gltf-model="#testmodel" id="testmodel_1" rotation="0 0 0" position="0 -10 3" scale="0.3 0.3 0.3" webar-loadmonitor="elType: glb">
+          <a-entity gltf-model="#testmodel" id="testmodel_1" rotation="0 0 0" position="0 -30 3" scale="0.2 0.2 0.2" webar-loadmonitor="elType: glb">
             <a-light type="point" color="FFFFFF" position="10,0,2"></a-light>
           </a-entity>
+
+                  <!-- Using the asset management system. -->
+        <a-video src="#sample-video" width="16" height="9" position="0 0 -10"></a-video>
+
       </a-entity>
 
       <a-light type="spot" color="#FFFFFF" position="-2,5,5" look-at="a-entity"></a-light>
