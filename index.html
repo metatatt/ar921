@@ -2,14 +2,14 @@
 <html>
   <head>
     <link rel="shortcut icon" href="#" />
-    <title>Blippar WebAR SDK</title>
+    <title>Case 921-1</title>
 
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 
     <!-- Step 1: Include WebAR SDK script -->
-    <script src="./blippar/webar-sdk-v1.2.0-beta.min.js"
+    <script src="https://webar-sdk.blippar.com/releases/latest/cdn/blippar/webar-sdk-v1.2.0-beta.min.js?license-key=e48694dd-6c21-44f8-ad6c-7c0bb75d11ee"
       webar-mode="surface-tracking"
-      auto-start="false"
+      auto-start="true"
       logo-src="./models/casePlogo.png"
       logo-width="116px"
       logo-height="116px"
@@ -46,7 +46,7 @@
   </head>
 
   <body>
---921.1--
+<h1>921-1</h1>
     <!-- Step 2: Add webar-scene attribute to AFrame's <a-scene> tag -->
       <!-- Provide a valid Blippar license-key value in the key: property  -->
     <a-scene
@@ -57,7 +57,7 @@
       renderer="colorManagement: true;">
 
       <!-- Step 3: Add webar-camera attribute to AFrame's <a-entity camera> tag -->
-      <a-camera webar-camera></a-camera>
+      <a-camera webar-camera position="0 2 0"></a-camera>
 
       <a-assets timeout="60000">
         <a-asset-item id="keymodel" src="./models/syringe.glb"></a-asset-item>
